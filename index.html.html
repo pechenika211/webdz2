@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2 — Web-интерфейс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="header__inner">
+            <svg id="logo" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"  role="img" aria-label="Логотип сайта">
+            <circle cx="40" cy="40" r="38" fill="#ffffff" stroke="#2c5a8f" stroke-width="3"/>
+            <text x="40" y="53" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#4a7ab5">Л</text>
+            </svg>
+            <h1 class="header__title">Название сайта</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#links" class="nav__link">Ссылка меню 1</a></li>
+                    <li class="nav__item"><a href="#table" class="nav__link">Ссылка 2</a></li>
+                    <li class="nav__item"><a href="#form" class="nav__link">Ссылка 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main class="main">
+        <div class="container">
+
+            
+            <section id="links" class="section">
+                <h2 class="section__title">Список гиперссылок</h2>
+
+                <ol class="links-list">
+                    <li><a href="https://kubsu.ru/">абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
+                    <li><a href="https://www.kubsu.ru/">абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
+                    <li>
+                        <li>
+                        <a href="https://kubsu.ru/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="120" role="img" aria-label="Котик">
+                                <rect width="200" height="120" fill="#f0c987"/>
+                                <polygon points="60,30 75,10 90,30" fill="#f0c987" stroke="#333" stroke-width="2"/>
+                                <polygon points="110,30 125,10 140,30" fill="#f0c987" stroke="#333" stroke-width="2"/>
+                                <circle cx="70" cy="55" r="10" fill="#333"/>
+                                <circle cx="130" cy="55" r="10" fill="#333"/>
+                                <path d="M 80 85 Q 100 100 120 85" stroke="#333" stroke-width="3" fill="none"/>
+                            </svg>
+                        </a> — ссылка-изображение
+                    </li>
+                    <li><a href="/about">сокращенную ссылку на внутреннюю страницу</a></li>
+                    <li><a href="/">сокращенную ссылку на главную страницу</a></li>
+                    <li><a href="#top">Ссылка на фрагмент текущей страницы (наверх)</a></li>
+                    <li><a href="https://kubsu.ru/?param1=value1&amp;param2=value2&amp;param3=value3">Ссылка с тремя параметрами в URL</a></li>
+                    <li><a href="https://kubsu.ru/page.html?id=123">ссылка с параметром id в URL</a></li>
+                    <li><a href="current.html">относительную на страницу в текущем каталоге</a></li>
+                    <li><a href="about/about.html">относительную на страницу в каталоге about</a></li>
+                    <li><a href="../index.html">относительную на страницу в каталоге уровнем выше текущего</a></li>
+                    <li><a href="../../index.html">относительную на страницу в каталоге двумя уровнями выше</a></li>
+                    <li>
+                        контекстная ссылка в тексте абзаца:<br>
+                        Подробнее о вузе можно узнать на
+                        <a href="https://kubsu.ru/">официальном сайте КубГУ</a>, там есть вся информация.
+                    </li>
+                    <li><a href="https://ru.wikipedia.org/wiki/HTML#История">ссылка на фрагмент страницы стороннего сайта</a></li>
+                    <li>
+                        ссылки из прямоугольных и круглых областей картинки:<br>
+                        <a href="https://kubsu.ru/" title="Прямоугольная область">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" role="img" aria-label="Прямоугольная область">
+                                <rect width="120" height="120" fill="#4a7ab5"/>
+                                <text x="60" y="65" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="16">Прямоуг.</text>
+                            </svg>
+                        </a>
+                        <a href="https://kubsu.ru/about" title="Круглая область">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" role="img" aria-label="Круглая область">
+                                <circle cx="60" cy="60" r="55" fill="#7ab54a"/>
+                                <text x="60" y="65" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="16">Круг</text>
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="">ссылка с пустым href</a></li>
+                    <li><a>Ссылка без href</a></li>
+                    <li><a href="https://kubsu.ru/" rel="nofollow">ссылка, по которой запрещён переход поисковикам</a></li>
+                    <li>
+                        <!--noindex-->
+                        <a href="https://kubsu.ru/">ссылка, запрещённая для индексации поисковиками</a>
+                        <!--/noindex-->
+                    </li>
+                    <li>
+                        нумерованный список ссылок с подписями title:
+                        <ul>
+                            <li><a href="https://kubsu.ru/" title="Главная страница КубГУ">КубГУ</a></li>
+                            <li><a href="https://ya.ru/" title="Яндекс">Яндекс</a></li>
+                            <li><a href="https://ru.wikipedia.org/" title="Википедия">Википедия</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ftp://user:password@ftp.kubsu.ru/file.zip">ссылка на файл на FTP-сервере с авторизацией</a></li>
+                </ol>
+            </section>
+
+            
+            <section id="table" class="section">
+    <h2 class="section__title">Таблица</h2>
+
+    <table class="table">
+        <caption>Пример таблицы</caption>
+        <thead>
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+                <th>Колонка 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Дом</td>
+                <td>Трава</td>
+                <td>Небо</td>
+                <td>Солнце</td>
+            </tr>
+            <tr>
+                <td>Река</td>
+                <td colspan="2">Лес</td>
+            </tr>
+            <tr>
+                <td>Кот</td>
+                <td>Пёс</td>
+                <td>Птица</td>
+                <td>Рыба</td>
+            </tr>
+            <tr>
+                <td>Хлеб</td>
+                <td>Молоко</td>
+                <td>Сыр</td>
+                <td>Масло</td>
+            </tr>
+            <tr>
+                <td>Ветер</td>
+                <td>Дождь</td>
+                <td>Снег</td>
+                <td>Град</td>
+            </tr>
+            <tr>
+                <td>Утро</td>
+                <td>День</td>
+                <td>Вечер</td>
+                <td>Ночь</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+            
+            <section id="form" class="section">
+                <h2 class="section__title">Форма</h2>
+
+                <form action="/save" method="post" id="myForm" class="form">
+                    <p class="form__row">
+                        <label for="fio" class="form__label">1. ФИО:</label><br>
+                        <input type="text" id="fio" name="fio" required
+                               pattern="[А-Яа-яЁёA-Za-z\s\-]+"
+                               title="Только буквы, пробел и дефис. Цифры нельзя."
+                               class="form__input">
+                    </p>
+
+                    <p class="form__row">
+                        <label for="phone" class="form__label">2. Телефон:</label><br>
+                        <input type="tel" id="phone" name="phone" required
+                               pattern="\+?[0-9\s\-\(\)]{7,18}"
+                               title="Только цифры и символы + - ( ). От 7 до 18 символов."
+                               class="form__input">
+                    </p>
+
+                    <p class="form__row">
+                        <label for="email" class="form__label">3. E-mail:</label><br>
+                        <input type="email" id="email" name="email" required class="form__input">
+                    </p>
+
+                    <p class="form__row">
+                        <label for="birthdate" class="form__label">4. Дата рождения:</label><br>
+                        <input type="date" id="birthdate" name="birthdate" required class="form__input">
+                    </p>
+
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">5. Пол:</legend>
+                        <label class="form__radio">
+                            <input type="radio" name="gender" value="male"> Мужской
+                        </label>
+                        <label class="form__radio">
+                            <input type="radio" name="gender" value="female"> Женский
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">6. Любимый язык программирования:</legend>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="Pascal"> Pascal</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="C"> C</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="C++"> C++</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="JavaScript"> JavaScript</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="PHP"> PHP</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="Python"> Python</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="Java"> Java</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="Haskell"> Haskell</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="Clojure"> Clojure</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="Prolog"> Prolog</label>
+                        <label class="form__checkbox"><input type="checkbox" name="lang[]" value="Scala"> Scala</label>
+                        <span id="lang-error" class="form__error">Выберите хотя бы один язык!</span>
+                    </fieldset>
+
+                    <p class="form__row">
+                        <label for="bio" class="form__label">7. Биография:</label><br>
+                        <textarea id="bio" name="bio" rows="6" cols="40" class="form__textarea"></textarea>
+                    </p>
+
+                    <p class="form__row">
+                        <label class="form__checkbox form__checkbox--contract">
+                            <input type="checkbox" name="contract" value="yes" required>
+                            8. С контрактом ознакомлен(а)
+                        </label>
+                    </p>
+
+                    <p class="form__row">
+                        <button type="submit" class="form__button">Сохранить</button>
+                    </p>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+        
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">(с) Сергей Синица</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+            const langs = document.querySelectorAll('input[name="lang[]"]:checked');
+            const langErr = document.getElementById("lang-error");
+
+            if (langs.length === 0) {
+                langErr.style.display = "inline";
+                e.preventDefault();
+            } else {
+                langErr.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
