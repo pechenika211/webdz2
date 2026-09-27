@@ -37,19 +37,7 @@
                 <ol class="links-list">
                     <li><a href="https://kubsu.ru/">абсолютную гиперссылку на главную страницу сайта kubsu.ru</a></li>
                     <li><a href="https://www.kubsu.ru/">абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
-                    <li>
-                        <li>
-                        <a href="https://kubsu.ru/">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="120" role="img" aria-label="Котик">
-                                <rect width="200" height="120" fill="#f0c987"/>
-                                <polygon points="60,30 75,10 90,30" fill="#f0c987" stroke="#333" stroke-width="2"/>
-                                <polygon points="110,30 125,10 140,30" fill="#f0c987" stroke="#333" stroke-width="2"/>
-                                <circle cx="70" cy="55" r="10" fill="#333"/>
-                                <circle cx="130" cy="55" r="10" fill="#333"/>
-                                <path d="M 80 85 Q 100 100 120 85" stroke="#333" stroke-width="3" fill="none"/>
-                            </svg>
-                        </a> — ссылка-изображение
-                    </li>
+                    <li><a href="https://kubsu.ru/"><img src="https://sun9-53.vkuserphoto.ru/impg/0OQM-6YoYJNeTwLBMdcRtUrnPEg8uD3LZp5xhg/7f8tFk0d80s.jpg?quality=90&proxy=1&sign=675e13145171a3ecc0bb13ff55d19bb3&type=video_thumb"  alt="Котик" width="200" height="120">— ссылка-изображение</a></li>
                     <li><a href="/about">сокращенную ссылку на внутреннюю страницу</a></li>
                     <li><a href="/">сокращенную ссылку на главную страницу</a></li>
                     <li><a href="#top">Ссылка на фрагмент текущей страницы (наверх)</a></li>
@@ -248,6 +236,13 @@
                 e.preventDefault();
             } else {
                 langErr.style.display = "none";
+            }
+            const birthdate = document.getElementById("birthdate").value;
+
+            if(birthdate && birthdate>= "20226-01-01")
+            {
+                alert("Дату рождения должна быть раньше 2026 года.");
+                e.preventDefault();
             }
         });
     </script>
